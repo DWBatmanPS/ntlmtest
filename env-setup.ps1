@@ -14,4 +14,4 @@ $destinationGit = "$env:TEMP\GitInstaller.exe"
 
 Invoke-WebRequest -Uri $githubInstallerUrl -OutFile $destinationGit
 
-Start-Process -FilePath "GitInstaller.exe" -ArgumentList "/VERYSILENT", "/NORESTART", "$env:TEMP\GitInstaller.exe -Wait
+Start-Process -FilePath "GitInstaller.exe" -ArgumentList "/VERYSILENT", "/NORESTART", "$env:TEMP\GitInstaller.exe" -Wait
