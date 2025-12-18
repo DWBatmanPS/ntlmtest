@@ -1,0 +1,23 @@
+{
+  "name": "ntlm-test-app",
+  "version": "1.0.0",
+  "description": "Lightweight NTLM authentication test application",
+  "main": "server.js",
+  "type": "module",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "node --watch server.js"
+  },
+  "keywords": [
+    "ntlm",
+    "authentication",
+    "test"
+  ],
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.18.2",
+    "express-ntlm": "^2.7.0"
+  },
+  "devDependencies": {}
+}

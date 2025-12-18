@@ -1,0 +1,23 @@
+version: '3.8'
+
+services:
+  ntlm-test-app:
+    build: .
+    ports:
+      - "3000:3000"
+    environment:
+      - PORT=3000
+      - HOST=0.0.0.0
+      - NTLM_DOMAIN=testdomain
+      - NTLM_WORKSTATION=TESTPC
+    volumes:
+      - ./public:/app/public
+      - ./server.js:/app/server.js
+      - ./config.js:/app/config.js
+    restart: unless-stopped
+    networks:
+      - ntlm-network
+
+networks:
+  ntlm-network:
+    driver: bridge
